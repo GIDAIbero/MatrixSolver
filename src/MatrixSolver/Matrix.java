@@ -43,7 +43,7 @@ public abstract class Matrix{
   }
 
 
-  /* setValueAtFunction:
+  /* setValueAt method:
    *
    * Description:
    *    Basic setter method for individual elements inside the array, takes
@@ -73,16 +73,17 @@ public abstract class Matrix{
       throw new ElementOutOfRangeException(" The value provided was negative" );
     }
 
-    if(row > this.rows || column > this.columns){
+    if(row >= this.rows || column >= this.columns){
       throw new ElementOutOfRangeException(
-              "The value provided was bigger than expected");
+              "The value provided was larger than expected");
     }
 
     this.values[row][column] = value;
     return value;
   }
 
-  /* setValueAtFunction:
+
+  /* getValueAt Method:
    *
    * Description:
    *    Basic getter method for individual elements inside the array, takes
@@ -121,6 +122,7 @@ public abstract class Matrix{
     return this.values[row][column];
   }
 
+
   /* toString
    *
    * Description:
@@ -148,6 +150,7 @@ public abstract class Matrix{
     return result;
   }
 
+
   /* returnMatrix
    *
    * Description:
@@ -167,6 +170,7 @@ public abstract class Matrix{
   public float[][] returnMatrix(){
     return this.values;
   }
+
 
   /* isSolved
    *
@@ -188,6 +192,7 @@ public abstract class Matrix{
   public boolean isSolved(){
     return this.solved;
   }
+
 
   /* Solve:
    *
