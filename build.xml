@@ -5,7 +5,8 @@
     <path id="classpath.base">
     </path>
      <path id="classpath.test">
-        <pathelement location="/usr/share/java/junit4.jar" />
+         <pathelement location="lib/junit-4.11.jar" />
+         <pathelement location="lib/hamcrest-core-1.3.jar" />
         <pathelement location="${unit-tst-dir}" />
         <pathelement location="${src-dir}"/>
         <path refid="classpath.base" />
