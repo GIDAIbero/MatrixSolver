@@ -28,8 +28,8 @@
         <junit>
             <classpath refid="classpath.test" />
             <formatter type="brief" usefile="false" />
-            <!-- <test name="TestExample" /> -->
             <test name="TestLinearEquationSystem" />
+            <test name="TestDeterminant" /> 
         </junit>
     </target>
 
