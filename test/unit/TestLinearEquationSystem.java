@@ -196,7 +196,7 @@ public class TestLinearEquationSystem {
             Assert.assertEquals(10.0f,
                     test_matrix.setValueAt(height-1,width-1,10.0f),0.1);
             Assert.assertEquals(10.0f,
-                    test_matrix.setValueAt(height-1,width-1,10.0f),0.1);
+                    test_matrix.setValueAt(height-1,width,10.0f),0.1);
         }catch(ElementOutOfRangeException e){
             System.out.println(e.toString());
             throw e;
