@@ -49,7 +49,7 @@ public class TestLinearEquationSystem {
 
     /* Test constructor for unsquare matrices. 
      * we expect the LinearEquationSystem to throw an exception for unsquared
-     * matreces
+     * matrices
      */
     @Test(expected = UnsquaredMatrixException.class)
     public void test_unsquared_constructor() throws UnsquaredMatrixException{
@@ -64,7 +64,7 @@ public class TestLinearEquationSystem {
 
     /* Test case for negative values on the constructor. 
      * an UnsquaredMatrixException should be thrown in case the constructor 
-     * containes negative indeces, for either rows or columns.
+     * containes negative indices, for either rows or columns.
      */
     @Test(expected = UnsquaredMatrixException.class)
     public void test_negative_rows_constructor()
@@ -96,7 +96,7 @@ public class TestLinearEquationSystem {
    
 
     /* Test case for invalid ranges in the setValueAt functions */
-    /* Test for negative indeces in the setValueAt method
+    /* Test for negative indices in the setValueAt method
      * Since the row or the column value is negative, an 
      * ElementOutOfRangeException should be thrown
      */
@@ -119,7 +119,7 @@ public class TestLinearEquationSystem {
         }
     }
 
-    /* Test for negative indeces in the setValueAt method
+    /* Test for negative indices in the setValueAt method
      * Since the row or the column value is negative, an 
      * ElementOutOfRangeException should be thrown
      */
@@ -143,7 +143,7 @@ public class TestLinearEquationSystem {
     }
 
 
-    /* Test for overflow indeces in the setValueAt method
+    /* Test for overflow indices in the setValueAt method
      * Since the row or the column value is negative, an 
      * ElementOutOfRangeException should be thrown
      */
@@ -167,7 +167,7 @@ public class TestLinearEquationSystem {
     }
 
 
-    /* Test for overflow indeces in the setValueAt method
+    /* Test for overflow indices in the setValueAt method
      * Since the row or the column value is negative, an 
      * ElementOutOfRangeException should be thrown
      */
