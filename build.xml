@@ -19,6 +19,7 @@
             <classpath refid="classpath.test"/>
         </javac>
     </target>
+    
     <target name="clean-compile-test">
         <delete verbose="${TALK}">
             <fileset dir="${unit-tst-dir}" includes="**/*.class" />
@@ -37,15 +38,12 @@
     <target name="compile-source">
         <javac srcdir="${src-dir}" verbose="${TALK}"/>
     </target>
-    <target name="clean-source">
-        <delete>
-            <fileset dir="${src-dir}" includes="**/*.class"/>
-        </delete>
-    </target>
-    <target name="all" depends="test" />
+    
     <target name="clean" depends="clean-compile-test">
         <delete verbose="${TALK}">
             <fileset dir="${src-dir}" includes="**/*.class" />
         </delete>
     </target>
+    
+    <target name="all" depends="test" />
 </project>
