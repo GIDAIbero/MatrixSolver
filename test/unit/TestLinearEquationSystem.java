@@ -1,11 +1,38 @@
+/************************** 
+ * The MIT License (MIT)
+ *
+ * Copyright (c) 2014 GIDA Ibero (Campus Ciudad de México)
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to
+ * deal in the Software without restriction, including without limitation the
+ * rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+ * sell copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+ * IN THE SOFTWARE. 
+ *******************************/
 
-//import junit.framework.*;
+/* Test suite for the Linear Equation system class.
+ *
+ *  This class contains all of the unit testing methods for the 
+ *  LinearEquationSystemclass
+ */
 import org.junit.Before;
 import org.junit.After;
 import org.junit.*;
+
 import org.junit.Assert;
 import java.lang.Math;
-import java.lang.Exception;
 
 import java.lang.System;
 
@@ -18,7 +45,7 @@ public class TestLinearEquationSystem {
 
     LinearEquationSystem test_matrix;
 
-    /* Test constructor for unsquare matreces. 
+    /* Test constructor for unsquare matrices. 
      * we expect the LinearEquationSystem to throw an exception for unsquared
      * matreces
      */
@@ -51,7 +78,7 @@ public class TestLinearEquationSystem {
 
     /* Test case for negative values on the constructor. 
      * an UnsquaredMatrixException should be thrown in case the constructor 
-     * containes negative indeces, for either rows or columns.
+     * containes negative indices, for either rows or columns.
      */
     @Test(expected = UnsquaredMatrixException.class)
     public void test_negative_columns_constructor()

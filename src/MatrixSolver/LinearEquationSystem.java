@@ -1,8 +1,34 @@
+/**************** 
+ * The MIT License (MIT)
+ *
+ * Copyright (c) 2014 GIDA Ibero (Campus Ciudad de México)
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to
+ * deal in the Software without restriction, including without limitation the
+ * rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+ * sell copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+ * IN THE SOFTWARE.
+ ****************/ 
+
 package MatrixSolver;
+
+
 
 /* LinearEquationSystem class:
  *
- *  This class is intended to be used to solve a Linear equation system. That
+ *  This class is intended to be used to solve a linear equation system. That
  *  being a square matrix with a result vector appended to it. This class
  *  is meant to be populated with the values using the method setValueAt and
  *  then callind the Solve Method, if everything went fine, then the 
@@ -126,7 +152,7 @@ public class LinearEquationSystem extends Matrix{
             indxr[i] = irow;
             indxc[i] = icol;
             if(this.values[icol-1][icol-1] == 0.0f){
-                throw new ImpossibleSolutionException(" This matrix is a" +
+                throw new ImpossibleSolutionException(" This is a" +
                                                       " singular Matrix");
             }
             // obtain the inverse value of the pivot element and multiply it by 
