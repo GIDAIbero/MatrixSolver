@@ -5,7 +5,8 @@
     <path id="classpath.base">
     </path>
      <path id="classpath.test">
-        <pathelement location="/usr/share/java/junit4.jar" />
+         <pathelement location="lib/junit-4.11.jar" />
+         <pathelement location="lib/hamcrest-core-1.3.jar" />
         <pathelement location="${unit-tst-dir}" />
         <pathelement location="${src-dir}"/>
         <path refid="classpath.base" />
@@ -18,6 +19,7 @@
             <classpath refid="classpath.test"/>
         </javac>
     </target>
+    
     <target name="clean-compile-test">
         <delete verbose="${TALK}">
             <fileset dir="${unit-tst-dir}" includes="**/*.class" />
@@ -28,23 +30,20 @@
         <junit>
             <classpath refid="classpath.test" />
             <formatter type="brief" usefile="false" />
-            <!-- <test name="TestExample" /> -->
             <test name="TestLinearEquationSystem" />
+            <test name="TestDeterminant" /> 
         </junit>
     </target>
 
     <target name="compile-source">
         <javac srcdir="${src-dir}" verbose="${TALK}"/>
     </target>
-    <target name="clean-source">
-        <delete>
-            <fileset dir="${src-dir}" includes="**/*.class"/>
-        </delete>
-    </target>
-    <target name="all" depends="test" />
+    
     <target name="clean" depends="clean-compile-test">
         <delete verbose="${TALK}">
             <fileset dir="${src-dir}" includes="**/*.class" />
         </delete>
     </target>
+    
+    <target name="all" depends="test" />
 </project>
